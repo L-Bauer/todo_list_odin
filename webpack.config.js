@@ -6,13 +6,14 @@
  module.exports = {
    mode: "development",
    entry: {
-    index: "./src/js/main.js"
+    main: "./src/js/main.js"
    },
    output: {
-     filename: "main.js",
-     path: path.resolve(__dirname, "dist"),
-     clean: true,
+    filename: "[name].bundle.js",
+    path: path.resolve(__dirname, "dist"),
+    clean: true,
    },
+   devtool: "inline-source-map",
    devServer: {
      static: path.resolve(__dirname, "dist"),
      port: 8080,
