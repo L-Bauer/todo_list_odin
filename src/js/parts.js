@@ -1,5 +1,6 @@
-const titleFactory = (title) => {
+function addTitle(title) {
   console.log(`This is the title: ${title}`);
-};
+  console.log("Now a function");
+}
 
-export default titleFactory;
+export default addTitle;

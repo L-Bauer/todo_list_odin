@@ -1,13 +1,13 @@
-import titleFactory from "./parts";
+import addTitle from "./parts";
 
 const projectFactory = (title) => {
   console.log(`Project ${title}`);
-  titleFactory(title);
+  addTitle(title);
 };
 
 const taskFactory = (title) => {
   console.log(`Task: ${title}`);
-  titleFactory(title);
+  addTitle(title);
 };
 
 projectFactory("default");
