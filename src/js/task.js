@@ -1,11 +1,15 @@
 export default () => {
-  const greet = () => {
-    console.log("Hello World!");
+  let taskTitle;
+
+  const addTitle = (title) => {
+    taskTitle = title;
   };
 
-  const leave = () => {
-    console.log("Bye Bye");
+  const getTitle = () => taskTitle;
+
+  const addDescription = (description) => {
+    console.log(`Description: ${description}`);
   };
 
-  return { greet, leave };
+  return { addTitle, addDescription, getTitle };
 };
