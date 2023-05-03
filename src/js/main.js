@@ -7,4 +7,7 @@ fooTask.addDescription("Clean House");
 
 const subBtn = document.querySelector("#test");
 
-subBtn.addEventListener("click", () => console.log("hello"));
+subBtn.addEventListener("click", () => {
+  fooTask.addTitle(prompt());
+  console.log(fooTask.getTitle());
+});
