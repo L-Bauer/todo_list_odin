@@ -1,10 +1,20 @@
+import Task from "./task";
+
 const taskFactory = () => {
-  const addTask = (titleText) => {
-    const newTitle = title(titleText);
-    newTitle.addTitle(titleText);
+  // Create new task
+  const addTask = (title, description, dueDate, priority) => {
+    const newTask = {
+      taskTitle: title,
+      taskDescription: description,
+      taskDueDate: dueDate,
+      taskPriority: priority,
+    };
+    return newTask;
   };
 
-  const getTitle = () => "Test";
-
-  return { addTask, getTitle };
+  return { addTask };
 };
+
+const fooTask = Task();
+fooTask.greet();
+fooTask.leave();
