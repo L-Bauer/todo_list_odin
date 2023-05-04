@@ -1,15 +1,16 @@
-export default () => {
-  let taskTitle;
-
-  const addTitle = (title) => {
-    taskTitle = title;
-  };
-
-  const getTitle = () => taskTitle;
+export default (name) => {
+  let assignedProject;
+  const getTitle = () => name;
 
   const addDescription = (description) => {
     console.log(`Description: ${description}`);
   };
 
-  return { addTitle, addDescription, getTitle };
+  const setProject = (projectName) => {
+    assignedProject = projectName;
+  };
+
+  const getProject = () => assignedProject;
+
+  return { getTitle, setProject, getProject };
 };
