@@ -1,20 +1,19 @@
 import Task from "./task";
-import Project from "./project";
 
 const projects = [];
+const tasks = [];
 
-function createProject(title) {
-  const project = Project(title);
-  projects.push(project);
+function createTask(name, project) {
+  const newTask = Task(name);
+  newTask.setProject(project);
+  if (!projects.includes(project)) {
+    projects.push(project);
+  }
+  tasks.push(newTask);
 }
 
-createProject("One");
-createProject("Two");
+function showAllTasks() {
+  tasks.forEach((value) => console.log(value.getTitle()));
+}
 
-projects.forEach((foo) => { console.log(foo.getTitle()); });
-
-const found = projects.find((foo) => foo.getTitle() === "One");
-found.addTask("Clean");
-found.addTask("Magic");
-
-found.getTaskList().forEach((doo) => console.log(doo.getTitle()));
+export { createTask, showAllTasks };
